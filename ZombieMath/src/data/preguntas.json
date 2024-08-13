@@ -1,0 +1,55 @@
+{
+    "probabilidad": [
+      {
+        "pregunta": "¿Cuál es la probabilidad de sacar un rey de un mazo de cartas estándar?",
+        "respuesta_correcta": "1/13"
+      },
+      {
+        "pregunta": "Si lanzas un dado justo, ¿cuál es la probabilidad de obtener un número par?",
+        "respuesta_correcta": "1/2"
+      },
+      {
+        "pregunta": "¿Cuál es la probabilidad de obtener un 7 al lanzar dos dados?",
+        "respuesta_correcta": "1/6"
+      },
+      {
+        "pregunta": "Si una urna tiene 3 bolas rojas y 2 bolas azules, ¿cuál es la probabilidad de sacar una bola roja?",
+        "respuesta_correcta": "3/5"
+      },
+      {
+        "pregunta": "En una clase de 30 estudiantes, 18 son niñas. Si eliges un estudiante al azar, ¿cuál es la probabilidad de que sea una niña?",
+        "respuesta_correcta": "3/5"
+      },
+      {
+        "pregunta": "¿Cuál es la probabilidad de obtener al menos un 'cara' al lanzar dos monedas?",
+        "respuesta_correcta": "3/4"
+      }
+    ],
+    "calculo": [
+      {
+        "pregunta": "¿Cuál es la derivada de 3x^2?",
+        "respuesta_correcta": "6x"
+      },
+      {
+        "pregunta": "¿Cuál es la integral indefinida de 2x?",
+        "respuesta_correcta": "x^2 + C"
+      },
+      {
+        "pregunta": "¿Cuál es el límite de (x^2 - 1)/(x - 1) cuando x tiende a 1?",
+        "respuesta_correcta": "2"
+      },
+      {
+        "pregunta": "¿Cuál es la derivada de sin(x)?",
+        "respuesta_correcta": "cos(x)"
+      },
+      {
+        "pregunta": "¿Cuál es la integral de 1/x dx?",
+        "respuesta_correcta": "ln|x| + C"
+      },
+      {
+        "pregunta": "¿Cuál es el valor de la derivada de e^x en x = 0?",
+        "respuesta_correcta": "1"
+      }
+    ]
+  }
+  

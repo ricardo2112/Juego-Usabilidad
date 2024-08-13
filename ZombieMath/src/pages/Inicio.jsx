@@ -13,7 +13,6 @@ const Inicio = () => {
 
   return (
     <div>
-        <h1>Inicio</h1>
         {mostrarInicio ? (
             <InicioComponente irCategoria={irCategoria} />   
         ): (
