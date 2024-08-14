@@ -42,4 +42,4 @@ const Victoria = () => {
   )
 }
 
-export default Victoria
+export default Victoria;

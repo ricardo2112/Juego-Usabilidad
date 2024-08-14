@@ -24,4 +24,4 @@ const Derrota = () => {
   )
 }
 
-export default Derrota
+export default Derrota;
