@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
 import { FaExclamationTriangle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import '../styles/components/PopUpPuerta.css'; // Asegúrate de crear este archivo CSS
+import '../styles/components/PopUpPuerta.css';
 
 const PopUpPuerta = ({ show, onHide }) => {
     const navigate = useNavigate();
@@ -10,10 +10,10 @@ const PopUpPuerta = ({ show, onHide }) => {
     useEffect(() => {
         if (show) {
             const timer = setTimeout(() => {
-                navigate('/derrota'); // Redirige si el pop-up no se cierra en 5 segundos
-            }, 5000);
+                navigate('/derrota', { state: { motivo: 'puerta' } }); // Redirige si el pop-up no se cierra en 5 segundos
+            }, 40000); //   40 segundos 
 
-            return () => clearTimeout(timer); // Limpia el temporizador si el pop-up se cierra antes
+            return () => clearTimeout(timer);
         }
     }, [show, navigate]);
 

@@ -6,6 +6,9 @@ import PopupError from '../components/PopUpError';
 import PopupCorrecto from '../components/PopUpCorrecto';
 import PopUpPuerta from '../components/PopUpPuerta';
 import Temporizador from '../components/Temporizador';
+import Suministros from '../components/Suministros';
+import Contadores from '../components/Contadores';
+import '../styles/pages/Principal.css';
 
 const Principal = () => {
     const { categoria } = useParams();
@@ -26,19 +29,18 @@ const Principal = () => {
 
     useEffect(() => {
         if (errores >= 3) {
-            navigate('/derrota');
+            navigate('/derrota', { state: { motivo: 'respuesta' } });
         } else if (aciertos >= 4) {
             navigate('/victoria');
         }
     }, [errores, aciertos, navigate]);
 
     useEffect(() => {
-        // Mostrar PopUpPuerta cada 40 segundos
         const intervaloPopUpPuerta = setInterval(() => {
             if (!mostrarPopup && !mostrarPopUpPuerta && indicePreguntaActual < preguntas.length) {
                 setMostrarPopUpPuerta(true);
             }
-        }, 40000); // Cada 40 segundos
+        }, 10000);
 
         return () => clearInterval(intervaloPopUpPuerta);
     }, [mostrarPopup, mostrarPopUpPuerta, indicePreguntaActual, preguntas.length]);
@@ -61,7 +63,7 @@ const Principal = () => {
 
     const manejarEnvio = () => {
         if (!preguntas[indicePreguntaActual]) {
-            return; // No hace nada si la pregunta actual no existe
+            return;
         }
 
         const respuestaCorrecta = preguntas[indicePreguntaActual].respuesta_correcta.trim().toLowerCase();
@@ -84,50 +86,47 @@ const Principal = () => {
         : '';
 
     return (
-        <div className='d-flex flex-column justify-content-center align-items-center vh-100 vw-100'
+        <div
+            className='principal-container'
             style={{
                 backgroundImage: `url(${FondoPrincipal})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-            }}>
-            <h1 className='text-center py-3'>Preparación del antídoto</h1>
+            }}
+        >
+            <h1 className='principal-title'>Preparación del antídoto</h1>
+
+            <Contadores aciertos={aciertos} errores={errores} />
+
             {indicePreguntaActual < preguntas.length ? (
-                <div className='mb-4 py-3'>
-                    <h4 className='fw-regular py-4'>{preguntas[indicePreguntaActual]?.pregunta}</h4>
+                <div className='pregunta-container'>
+                    <h4 className='pregunta-titulo'>{preguntas[indicePreguntaActual]?.pregunta}</h4>
                     <input
                         type='text'
                         value={respuestaUsuario}
                         onChange={manejarCambioRespuesta}
-                        className='form-control my-3 input-centered'
+                        className='form-control input-centered'
                         placeholder='Escribe tu respuesta aquí'
                     />
                     <div className='d-flex justify-content-center'>
                         <button
                             onClick={manejarEnvio}
-                            className='btn btn-light border border-dark text-dark mt-2 btn-custom'
+                            className='btn btn-light text-dark btn-custom'
                         >
                             Enviar
                         </button>
                     </div>
-                    <p className='mt-3'>Aciertos: {aciertos}/4</p>
-                    <p className='mt-3'>Errores: {errores}/3</p>
                 </div>
             ) : (
                 <p>Cargando pregunta...</p>
             )}
 
-            {/* Popup Error */}
             {mostrarPopup && !mostrarResultado && (
                 <PopupError show={mostrarPopup} onHide={handleClosePopup} mensaje={mensaje} />
             )}
 
-            {/* Popup Correcto */}
             {mostrarPopup && mostrarResultado && (
                 <PopupCorrecto show={mostrarPopup} onHide={handleClosePopup} mensaje={mensaje} />
             )}
 
-            {/* PopUp Puerta */}
             {mostrarPopUpPuerta && (
                 <PopUpPuerta
                     show={mostrarPopUpPuerta}
@@ -135,8 +134,8 @@ const Principal = () => {
                 />
             )}
 
-            {/* Temporizador */}
             <Temporizador />
+            <Suministros errores={errores} />
         </div>
     );
 };

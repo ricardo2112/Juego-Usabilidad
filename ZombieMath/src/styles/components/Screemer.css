@@ -1,0 +1,21 @@
+.screemer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 48px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+    /* Asegúrate de que el ScreemerComponent esté sobre otros componentes */
+}
+
+.screemer.show {
+    opacity: 1;
+}

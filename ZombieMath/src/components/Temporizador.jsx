@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/components/Temporizador.css';
 
 const Temporizador = () => {
-    const [tiempoRestante, setTiempoRestante] = useState(90); // 1 minuto 30 segundos en segundos
+    const [tiempoRestante, setTiempoRestante] = useState(600); // 10 minutos en segundos
     const [activo, setActivo] = useState(true);
     const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ const Temporizador = () => {
 
     useEffect(() => {
         // Reinicia el temporizador
-        setTiempoRestante(90);
+        setTiempoRestante(600); // 10 minutos en segundos
         setActivo(true);
     }, []);
 
@@ -40,10 +40,12 @@ const Temporizador = () => {
     };
 
     return (
-        <div className="temporizador d-flex align-items-center">
-            <h2>Tiempo restante:</h2>
-            <FaRegClock className="icono-temporizador" />
-            <span className="tiempo-restante">{formatearTiempo(tiempoRestante)}</span>
+        <div className='temporizador-container'>
+            <h2 className='titulo-temporizador'>Tiempo Restante</h2>
+            <div className="temporizador d-flex align-items-center">
+                <FaRegClock className="icono-temporizador" />
+                <span className="tiempo-restante">{formatearTiempo(tiempoRestante)}</span>
+            </div>
         </div>
     );
 };

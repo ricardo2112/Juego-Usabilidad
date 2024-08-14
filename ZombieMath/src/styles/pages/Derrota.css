@@ -1,0 +1,70 @@
+/* Estilo general para la página de derrota */
+.derrota-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* Estilo específico para la derrota por puerta */
+.derrota-puerta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo específico para la derrota por suministros */
+.derrota-suministros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo para el contenedor de la derrota general */
+.derrota-default {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo para los botones */
+.btn {
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Estilo para el título y el mensaje */
+h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}

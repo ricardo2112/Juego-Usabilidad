@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FondoScreamer from '../assets/FondoScreamer.png';
 import ZombieSound from '../assets/zombie-sound.mp3';
+import '../styles/components/Screemer.css';
 
-const Screemer = () => {
+const Screemer = ({ onFinish }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -22,7 +23,9 @@ const Screemer = () => {
 
         // Redirigir a /derrota después de 3 segundos
         const timer = setTimeout(() => {
-            navigate('/derrota');
+            audio.pause();
+            audio.currentTime = 0;
+            onFinish(); // Llama a la función onFinish cuando el componente se desvanezca
         }, 3000);
 
         // Limpiar el audio y el temporizador al desmontar el componente
@@ -31,10 +34,10 @@ const Screemer = () => {
             audio.currentTime = 0;
             clearTimeout(timer);
         };
-    }, [navigate]);
+    }, [navigate, onFinish]);
 
     return (
-        <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+        <div className="screemer-container" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
             <img src={FondoScreamer} alt="Screamer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
     );
