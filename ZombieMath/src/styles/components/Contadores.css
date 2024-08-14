@@ -1,0 +1,47 @@
+.contador-aciertos-errores {
+    position: fixed;
+    top: 20px;
+    right: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.aciertos,
+.errores {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.aciertos p,
+.errores p {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 100px; /* Fija un ancho mínimo para evitar el movimiento */
+    text-align: right; /* Alineación a la derecha */
+    flex-shrink: 1; /* Evita que el texto se encoja cuando se añaden iconos */
+}
+
+.iconos-aciertos,
+.iconos-errores {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Los íconos se añaden hacia la derecha */
+    gap: 5px; /* Espacio entre los íconos */
+}
+
+.icono-acierto,
+.icono-error {
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.icono-acierto {
+    color: green;
+}
+
+.icono-error {
+    color: red;
+}
