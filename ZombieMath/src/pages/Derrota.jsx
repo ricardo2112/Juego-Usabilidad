@@ -18,7 +18,7 @@ const Derrota = () => {
       <p style={{ textAlign: 'center', fontSize: '32px' }}>Moriste mmv</p>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '32px' }}>
         <Link type='button' className='btn btn-dark'style={{fontSize: '32px', width: '300px'}} to={'/'}>Salir</Link>
-        <Link type='button' className='btn btn-dark' style={{fontSize: '32px', width: '300px'}} to={'/Principal'}>Intentar de nuevo</Link>
+        <Link type='button' className='btn btn-dark' style={{fontSize: '32px', width: '300px'}} to={'/'}>Intentar de nuevo</Link>
       </div>
     </div>
   )

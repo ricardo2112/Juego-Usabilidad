@@ -2,3 +2,11 @@
 body{
   background-color: white;
 }
+.input-centered {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.btn-custom {
+  padding: 10px 20px;
+}
