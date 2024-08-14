@@ -1,0 +1,50 @@
+/* Estilo para todo el modal */
+.custom-modal .modal-dialog {
+    border-radius: 50px; /* Border-radius de 50px para el contenedor principal */
+    overflow: hidden; /* Asegura que el border-radius se aplique correctamente */
+}
+
+.custom-modal .modal-content {
+    border-radius: 50px; /* Asegura que el contenido del modal tenga el mismo border-radius */
+}
+
+/* Estilo para el cuerpo del modal */
+.modal-body {
+    background-color: #ffcccc; /* Fondo rojo claro */
+    color: black;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 50px; /* Border-radius de 50px para el contenedor interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional: añade sombra para mejorar la visibilidad */
+    position: relative; /* Necesario para el posicionamiento absoluto del icono */
+}
+
+/* Estilo para el icono de error */
+.popup-error-icon {
+    font-size: 60px; /* Tamaño del icono más grande */
+    color: red;
+}
+
+/* Contenedor de texto dentro del popup */
+.popup-error-text-container {
+    background-color: white; /* Fondo blanco para el texto de "No te preocupes" */
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+/* Texto dentro del contenedor de texto */
+.popup-error-text-red {
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilo del botón dentro del popup */
+.popup-error-button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #f8f9fa; /* Color claro para el botón */
+    border: 1px solid #ced4da; /* Borde claro */
+    border-radius: 10px;
+    cursor: pointer;
+}

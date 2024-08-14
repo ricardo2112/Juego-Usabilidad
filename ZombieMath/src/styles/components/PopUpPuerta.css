@@ -1,0 +1,39 @@
+.popup-puerta-body {
+    background-image: url('../assets/FondoPrincipal.png');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.popup-puerta-icon {
+    font-size: 60px;
+    color: orange;
+}
+
+.popup-puerta-title {
+    color: red;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.popup-puerta-subtitle {
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.popup-puerta-message {
+    margin-top: 10px;
+}
+
+.popup-puerta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
