@@ -30,3 +30,28 @@
     font-size: 32px;
     width: 300px;
 }
+
+/* Estilo para el contenedor de botones */
+.derrota-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* Estilo para los botones */
+.derrota-button {
+    font-size: 32px;
+    width: 300px;
+}
+
+.highlight-text {
+    font-family: 'Love Ya Like A Sister', sans-serif;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-size: 120px;
+    color: white;
+  }
+  
+  .highlight-text::first-letter {
+    color: red;
+  }
+  

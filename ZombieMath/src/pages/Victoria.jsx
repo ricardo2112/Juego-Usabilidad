@@ -31,11 +31,13 @@ const Victoria = () => {
       color: 'white'
     }}>
     <h1 className='highlight-text' style={{ textAlign: 'center'}}>{highlightFirstLetters('Victoria')}</h1>
-      <p style={{ textAlign: 'center', fontSize: '32px' }}>¡Felicidades, científico! Has demostrado tu habilidad matemática y tu valentía en la lucha contra los zombies. Gracias a tu ingenio y determinación, has encontrado la cura y salvado a la humanidad de la amenaza zombi. 
-      ¡Eres un verdadero héroe de las matemáticas!</p>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '32px' }}>
-        <Link type='button' className='btn btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-4 px-5 py-4' to={'/'}>{highlightFirstLetters('Jugar')}</Link>
-        <Link type='button' className='btn btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-4 px-5 py-4' to={'/'}>{highlightFirstLetters('Salir')}</Link>
+    <p style={{ textAlign: 'center', fontSize: '32px', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+                marginBottom: '15rem', marginLeft: '9rem', marginRight: '9rem'
+             }}>¡Felicidades, científico! Has demostrado tu habilidad matemática y tu valentía en la lucha contra los zombies. Gracias a tu ingenio y determinación, has encontrado la cura y salvado a la humanidad de la amenaza zombi. 
+¡Eres un verdadero héroe de las matemáticas!</p>
+      <div className="derrota-buttons">
+        <Link to="/" className="btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold fs-3 text-white derrota-button">Jugar</Link>
+        <Link to="/" className="btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold fs-3 text-white derrota-button">Salir</Link>
       </div>
     </div>
 

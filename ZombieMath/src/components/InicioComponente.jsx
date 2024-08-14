@@ -49,7 +49,7 @@ function InicioComponente({ irCategoria }) {
                     style={{ maxWidth: '200px', fontSize: '1.2rem', backgroundColor: 'rgba(0, 0, 0, 0.3)'}}
                 />
             </div>
-            <button className='btn btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-4 px-5 py-4' onClick={irCategoria} >
+            <button className='btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-3 derrota-button' onClick={irCategoria} >
                 {highlightFirstLetters('Jugar')}
             </button>
         </div>

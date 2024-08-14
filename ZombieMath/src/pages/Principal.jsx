@@ -128,7 +128,7 @@ const Principal = () => {
                         className='form-control input-centered'
                         placeholder='Escribe tu respuesta aquí'
                     />
-                    <div className='d-flex justify-content-center'>
+                    <div className='d-flex justify-content-center py-4'>
                         <button
                             onClick={manejarEnvio}
                             className='btn btn-light text-dark btn-custom'

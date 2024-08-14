@@ -1,53 +1,53 @@
 {
     "probabilidad": [
       {
-        "pregunta": "¿Cuál es la probabilidad de sacar un rey de un mazo de cartas estándar?",
-        "respuesta_correcta": "1/13"
+        "pregunta": "Tienes una caja con 20 frascos de antídoto, y solo 2 de ellos contienen la cura verdadera. Si eliges un frasco al azar, ¿cuál es la probabilidad de que el frasco contenga la cura?",
+        "respuesta_correcta": "0.1"
       },
       {
-        "pregunta": "Si lanzas un dado justo, ¿cuál es la probabilidad de obtener un número par?",
-        "respuesta_correcta": "1/2"
+        "pregunta": "Hay 8 frascos de ingredientes, de los cuales 4 son esenciales para el antídoto. Si tomas un frasco al azar, ¿cuál es la probabilidad de que el frasco contenga un ingrediente esencial?",
+        "respuesta_correcta": "0.5"
       },
       {
-        "pregunta": "¿Cuál es la probabilidad de obtener un 7 al lanzar dos dados?",
-        "respuesta_correcta": "1/6"
+        "pregunta": "Tienes 3 frascos con diferentes ingredientes. Solo 1 de ellos tiene el ingrediente correcto para el antídoto. ¿Cuál es la probabilidad de elegir el frasco correcto al azar?",
+        "respuesta_correcta": "0.33"
       },
       {
-        "pregunta": "Si una urna tiene 3 bolas rojas y 2 bolas azules, ¿cuál es la probabilidad de sacar una bola roja?",
-        "respuesta_correcta": "3/5"
+        "pregunta": "En un grupo de 15 médicos, 6 están especializados en la búsqueda del antídoto. Si eliges un médico al azar, ¿cuál es la probabilidad de que sea un especialista en antídoto?",
+        "respuesta_correcta": "0.4"
       },
       {
-        "pregunta": "En una clase de 30 estudiantes, 18 son niñas. Si eliges un estudiante al azar, ¿cuál es la probabilidad de que sea una niña?",
-        "respuesta_correcta": "3/5"
+        "pregunta": "Hay 10 zonas en un laboratorio, de las cuales 3 tienen riesgos de infección. Si eliges una zona al azar, ¿cuál es la probabilidad de que esté libre de infección?",
+        "respuesta_correcta": "0.7"
       },
       {
-        "pregunta": "¿Cuál es la probabilidad de obtener al menos un 'cara' al lanzar dos monedas?",
-        "respuesta_correcta": "3/4"
+        "pregunta": "En una estantería hay 12 frascos, de los cuales 9 están sellados correctamente y 3 están abiertos. Si eliges un frasco al azar, ¿cuál es la probabilidad de que el frasco esté sellado correctamente?",
+        "respuesta_correcta": "0.75"
       }
     ],
     "calculo": [
       {
-        "pregunta": "¿Cuál es la derivada de 3x^2?",
+        "pregunta": "La fórmula para la cantidad de antídoto en un experimento es 3x^2. ¿Cuál es la derivada de esta fórmula para ajustar la dosis?",
         "respuesta_correcta": "6x"
       },
       {
-        "pregunta": "¿Cuál es la integral indefinida de 2x?",
+        "pregunta": "Para crear el antídoto, necesitas integrar la cantidad de mezcla representada por 2x. ¿Cuál es la integral indefinida de esta fórmula?",
         "respuesta_correcta": "x^2 + C"
       },
       {
-        "pregunta": "¿Cuál es el límite de (x^2 - 1)/(x - 1) cuando x tiende a 1?",
+        "pregunta": "Estás probando un nuevo suero cuya concentración se modela como (x^2 - 1)/(x - 1). ¿Cuál es el límite de esta concentración cuando x tiende a 1?",
         "respuesta_correcta": "2"
       },
       {
-        "pregunta": "¿Cuál es la derivada de sin(x)?",
+        "pregunta": "La efectividad del suero se describe con la función sin(x). ¿Cuál es la derivada de esta función para entender cómo cambia el efecto del suero?",
         "respuesta_correcta": "cos(x)"
       },
       {
-        "pregunta": "¿Cuál es la integral de 1/x dx?",
+        "pregunta": "Un componente esencial del suero se representa con 1/x. ¿Cuál es la integral de este componente con respecto a x?",
         "respuesta_correcta": "ln|x| + C"
       },
       {
-        "pregunta": "¿Cuál es el valor de la derivada de e^x en x = 0?",
+        "pregunta": "La función que describe la producción de un suero es e^x. ¿Cuál es el valor de la derivada de esta función cuando x = 0?",
         "respuesta_correcta": "1"
       }
     ]
