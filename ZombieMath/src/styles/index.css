@@ -1,7 +1,10 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+
 body{
   background-color: white;
 }
+
 .input-centered {
   max-width: 400px;
   margin: 0 auto;
@@ -10,3 +13,15 @@ body{
 .btn-custom {
   padding: 10px 20px;
 }
+
+.highlight-text {
+  font-family: 'Love Ya Like A Sister', sans-serif;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  font-size: 120px;
+  color: white;
+}
+
+.highlight-text::first-letter {
+  color: red;
+}
+
