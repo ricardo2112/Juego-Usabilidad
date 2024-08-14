@@ -1,0 +1,35 @@
+.derrota-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Estilo para el título */
+.derrota-title {
+    text-align: center;
+    font-size: 64px;
+}
+
+/* Estilo para el mensaje */
+.derrota-message {
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Estilo para el contenedor de botones */
+.derrota-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* Estilo para los botones */
+.derrota-button {
+    font-size: 32px;
+    width: 300px;
+}
