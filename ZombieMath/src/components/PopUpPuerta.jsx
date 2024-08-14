@@ -2,20 +2,36 @@ import React, { useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
 import { FaExclamationTriangle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import AlertSound from '../assets/Alert.mp3';  
 import '../styles/components/PopUpPuerta.css';
 
 const PopUpPuerta = ({ show, onHide }) => {
     const navigate = useNavigate();
+    const audio = new Audio(AlertSound);  // Crea la instancia del audio
 
     useEffect(() => {
         if (show) {
-            const timer = setTimeout(() => {
-                navigate('/derrota', { state: { motivo: 'puerta' } }); // Redirige si el pop-up no se cierra en 5 segundos
-            }, 40000); //   40 segundos 
+            const playAudio = async () => {
+                try {
+                    await audio.play();
+                } catch (err) {
+                    console.error('Error al intentar reproducir el audio automáticamente:', err);
+                }
+            };
 
-            return () => clearTimeout(timer);
+            playAudio();  // Intenta reproducir el sonido cuando el popup se muestra
+
+            const timer = setTimeout(() => {
+                navigate('/screemer'); // Cambia directamente a la ruta donde está el componente Screemer
+            }, 15000); // 15 segundos
+
+            return () => {
+                clearTimeout(timer);
+                audio.pause();  // Asegúrate de pausar y resetear el audio cuando el componente se oculte
+                audio.currentTime = 0;
+            };
         }
-    }, [show, navigate]);
+    }, [show, navigate, audio]);
 
     return (
         <Modal show={show} onHide={onHide} centered>

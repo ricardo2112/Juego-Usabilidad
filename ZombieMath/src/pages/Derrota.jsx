@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import DerrotaPuerta from '../components/DerrotaPuerta'; // Asegúrate de que la ruta sea correcta
 import DerrotaSuministros from '../components/DerrotaSuministros'; // Importa el componente DerrotaSuministros
 import FondoMuerte2 from '../assets/FondoMuerte2.png';
+import BadEnd from '../assets/BAD_ENDING.mp3'; // Importa el sonido
 import '../styles/pages/Derrota.css'; // Estilo general para la derrota
 
 const Derrota = () => {
     const location = useLocation();
     const motivo = location.state?.motivo; // Obtiene el motivo desde el estado de navegación
+
+    useEffect(() => {
+        const audio = new Audio(BadEnd);
+        audio.loop = true;  // El sonido se repite en bucle
+        const playAudio = async () => {
+            try {
+                await audio.play();
+            } catch (err) {
+                console.error('Error al intentar reproducir el audio automáticamente:', err);
+            }
+        };
+
+        playAudio();
+
+        return () => {
+            audio.pause(); // Pausar y limpiar el audio cuando el componente se desmonte
+            audio.currentTime = 0;
+        };
+    }, []);
 
     return (
         <div className="derrota-container">

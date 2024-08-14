@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import preguntasJson from '../data/preguntas.json';
 import FondoPrincipal from '../assets/FondoPrincipal.png';
+import FondoSound from '../assets/Fondo.mp3';  // Asegúrate de que la ruta del archivo es correcta
 import PopupError from '../components/PopUpError';
 import PopupCorrecto from '../components/PopUpCorrecto';
 import PopUpPuerta from '../components/PopUpPuerta';
 import Temporizador from '../components/Temporizador';
 import Suministros from '../components/Suministros';
 import Contadores from '../components/Contadores';
+
 import '../styles/pages/Principal.css';
 
 const Principal = () => {
@@ -44,6 +46,25 @@ const Principal = () => {
 
         return () => clearInterval(intervaloPopUpPuerta);
     }, [mostrarPopup, mostrarPopUpPuerta, indicePreguntaActual, preguntas.length]);
+
+    useEffect(() => {
+        const audio = new Audio(FondoSound);
+        audio.loop = true;
+        const playAudio = async () => {
+            try {
+                await audio.play();
+            } catch (err) {
+                console.error('Error al intentar reproducir el audio automáticamente:', err);
+            }
+        };
+
+        playAudio();
+
+        return () => {
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, []);
 
     const handleClosePopup = () => {
         setMostrarPopup(false);
@@ -90,6 +111,7 @@ const Principal = () => {
             className='principal-container'
             style={{
                 backgroundImage: `url(${FondoPrincipal})`,
+                backgroundSize: 'cover'
             }}
         >
             <h1 className='principal-title'>Preparación del antídoto</h1>

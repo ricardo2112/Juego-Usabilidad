@@ -4,6 +4,7 @@ import Principal from './pages/Principal';
 import Inicio from './pages/Inicio';
 import Victoria from './pages/Victoria';
 import Derrota from './pages/Derrota';
+import Screemer from './pages/Screemer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/principal/:categoria' element={<Principal />} />
         <Route path='/derrota' element={<Derrota />} />
         <Route path='/victoria' element={<Victoria />} />
+        <Route path="/screemer" element={<Screemer />} />
       </Routes>
     </Router>
   );
