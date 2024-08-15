@@ -1,5 +1,5 @@
 import React from 'react';
-import SuministrosImg from '../assets/suministros.png';
+import SuministrosImg from '../assets/Suministros.png';
 import '../styles/components/Suministros.css'; // Asegúrate de que el archivo CSS esté configurado
 
 const Suministros = ({ errores }) => {
