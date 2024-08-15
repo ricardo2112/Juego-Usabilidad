@@ -23,14 +23,14 @@ const DerrotaPuerta = () => {
     };
 
     return (
-        <div className="derrota-suministros" style={{ backgroundImage: `url(${FondoMuerte2})` }}>
-            <h1 className="highlight-text">{highlightFirstLetters('Game Over')}</h1>
-            <p style={{ textAlign: 'center', fontSize: '32px', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+        <div tabIndex={0} className="derrota-suministros" style={{ backgroundImage: `url(${FondoMuerte2})` }}>
+            <h1 tabIndex={0} className="highlight-text">{highlightFirstLetters('Game Over')}</h1>
+            <p tabIndex={0} style={{ textAlign: 'center', fontSize: '32px', textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
                 marginBottom: '15rem' // Añadir separación debajo del párrafo
              }}>No lograste cerrar la puerta a tiempo, un zombie te atacó</p>
             <div className="derrota-buttons">
-                <Link to="/" className="btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold fs-3 text-white derrota-button">Salir</Link>
-                <Link to="/" className="btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold fs-3 text-white derrota-button">Intentar de nuevo</Link>
+                <Link tabIndex={0} to="/" className="btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold fs-3 text-white derrota-button">Salir</Link>
+                <Link tabIndex={0} to="/" className="btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold fs-3 text-white derrota-button">Intentar de nuevo</Link>
             </div>
         </div>
     );

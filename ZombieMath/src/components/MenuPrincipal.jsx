@@ -23,6 +23,7 @@ function InicioComponente({ irCategoria }) {
 
     return (
         <div
+            tabIndex={0}
             className='d-flex flex-column justify-content-center align-items-center vh-100 vw-100'
             style={{
                 backgroundImage: `url(${FondoInicio})`,
@@ -30,11 +31,11 @@ function InicioComponente({ irCategoria }) {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
             }}>
-            <h2 className='highlight-text'>
+            <h2 tabIndex={0} className='highlight-text'>
                 {highlightFirstLetters('Zombie Math')}
             </h2>
             <div className='text-center mx-5 px-4'>
-                <p className='text-white fs-4 fw-regular mx-5 px-5 py-4'
+                <p tabIndex={0} className='text-white fs-4 fw-regular mx-5 px-5 py-4'
                 style={{
                     textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
                 }}>
@@ -42,14 +43,15 @@ function InicioComponente({ irCategoria }) {
                 </p>
             </div>
             <div className='d-flex justify-content-center py-5'>
-                <span className='fw-regular text-white px-4 fs-3'>Tu nombre:</span>
+                <span tabIndex={0} className='fw-regular text-white px-4 fs-3'>Tu nombre:</span>
                 <input 
+                    tabIndex={0}
                     type="text" 
                     className='form-control text-white' 
                     style={{ maxWidth: '200px', fontSize: '1.2rem', backgroundColor: 'rgba(0, 0, 0, 0.3)'}}
                 />
             </div>
-            <button className='btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-3 derrota-button' onClick={irCategoria} >
+            <button tabIndex={0} className='btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-3 derrota-button' onClick={irCategoria} >
                 {highlightFirstLetters('Jugar')}
             </button>
         </div>

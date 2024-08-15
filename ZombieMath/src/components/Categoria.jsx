@@ -19,6 +19,7 @@ const CategoriaComponente = () => {
 
   return (
     <div
+      tabIndex={0}
       className='d-flex flex-column justify-content-center align-items-center vh-100 vw-100'
       style={{
         backgroundImage: `url(${FondoInicio})`,
@@ -27,21 +28,23 @@ const CategoriaComponente = () => {
         backgroundRepeat: 'no-repeat',
       }}
     > 
-      <h2 className='highlight-text'>
+      <h2 tabIndex={0} className='highlight-text'>
           {highlightFirstLetters('Menú Principal')}
       </h2>
-      <p className='text-white fw-semibold fs-3 mb-4 text-center py-4'
+      <p tabIndex={0} className='text-white fw-semibold fs-3 mb-4 text-center py-4'
         style={{ textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
         }}>Selecciona la categoría que quieres jugar:</p>
-      <div className='d-grid gap-2 d-sm-flex justify-content-sm-center'>
+      <div tabIndex={0} className='d-grid gap-2 d-sm-flex justify-content-sm-center'>
         <Link 
-        to="/principal/probabilidad" 
+          tabIndex={0}
+          to="/principal/probabilidad" 
           className='btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-3 derrota-button' 
           style={{ minWidth: '200px', minHeight: '80px' }}
         >
           {highlightFirstLetters('Probabilidad')}
         </Link>
-        <Link 
+        <Link  
+          tabIndex={0}
           to="/principal/calculo" 
           className='btn btn-dark btn-outline-danger btn-lg d-flex justify-content-center align-items-center fw-bold text-white fs-3 derrota-button' 
           style={{ minWidth: '200px', minHeight: '80px' }}

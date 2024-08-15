@@ -7,7 +7,7 @@ import '../styles/components/PopUpPuerta.css';
 
 const PopUpPuerta = ({ show, onHide }) => {
     const navigate = useNavigate();
-    const audio = new Audio(AlertSound);  // Crea la instancia del audio
+    const audio = new Audio(AlertSound);
 
     useEffect(() => {
         if (show) {
@@ -19,34 +19,34 @@ const PopUpPuerta = ({ show, onHide }) => {
                 }
             };
 
-            playAudio();  // Intenta reproducir el sonido cuando el popup se muestra
+            playAudio();  
 
             const timer = setTimeout(() => {
-                navigate('/screemer'); // Cambia directamente a la ruta donde está el componente Screemer
-            }, 15000); // 15 segundos
+                navigate('/screemer'); 
+            }, 15000); 
 
             return () => {
                 clearTimeout(timer);
-                audio.pause();  // Asegúrate de pausar y resetear el audio cuando el componente se oculte
+                audio.pause(); 
                 audio.currentTime = 0;
             };
         }
     }, [show, navigate, audio]);
 
     return (
-        <Modal show={show} onHide={onHide} centered>
-            <Modal.Body className="popup-puerta-body">
+        <Modal tabIndex={0} show={show} onHide={onHide} centered>
+            <Modal.Body tabIndex={0} className="popup-puerta-body">
                 <FaExclamationTriangle className="popup-puerta-icon" />
-                <h1 className="popup-puerta-title">¡ALERTA DE SEGURIDAD!</h1>
-                <h3 className="popup-puerta-subtitle">
+                <h1 tabIndex={0} className="popup-puerta-title">¡ALERTA DE SEGURIDAD!</h1>
+                <h3 tabIndex={0} className="popup-puerta-subtitle">
                     ACCESO RESTRINGIDO<br />
                     MOVIMIENTO DETECTADOS CERCA DE LA ENTRADA
                 </h3>
-                <h5 className="popup-puerta-message">
+                <h5 tabIndex={0} className="popup-puerta-message">
                     Por favor, manténgase en zonas seguras y siga las instrucciones del personal.<br />
                     Procedimientos de seguridad activados.
                 </h5>
-                <button onClick={onHide} className="popup-puerta-button">
+                <button tabIndex={0} onClick={onHide} className="popup-puerta-button">
                     Bloquear Puerta
                 </button>
             </Modal.Body>

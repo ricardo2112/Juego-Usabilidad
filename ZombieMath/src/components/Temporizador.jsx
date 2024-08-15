@@ -40,11 +40,11 @@ const Temporizador = () => {
     };
 
     return (
-        <div className='temporizador-container'>
-            <h2 className='titulo-temporizador'>Tiempo Restante</h2>
-            <div className="temporizador d-flex align-items-center">
+        <div tabIndex={0} className='temporizador-container'>
+            <h2 tabIndex={0} className='titulo-temporizador'>Tiempo Restante</h2>
+            <div tabIndex={0} className="temporizador d-flex align-items-center">
                 <FaRegClock className="icono-temporizador" />
-                <span className="tiempo-restante">{formatearTiempo(tiempoRestante)}</span>
+                <span tabIndex={0} className="tiempo-restante">{formatearTiempo(tiempoRestante)}</span>
             </div>
         </div>
     );

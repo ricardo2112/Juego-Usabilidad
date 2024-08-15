@@ -38,7 +38,7 @@ const Screemer = ({ onFinish }) => {
 
     return (
         <div className="screemer-container" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
-            <img src={FondoScreamer} alt="Screamer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={FondoScreamer} alt="Screamer de Juego" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
     );
 };

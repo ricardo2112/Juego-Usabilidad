@@ -107,21 +107,23 @@ const Principal = () => {
         : '';
 
     return (
-        <div
+        <div 
+            tabIndex={0}
             className='principal-container'
             style={{
                 backgroundImage: `url(${FondoPrincipal})`,
                 backgroundSize: 'cover'
             }}
         >
-            <h1 className='principal-title'>Preparación del antídoto</h1>
+            <h1 tabIndex={0} className='principal-title'>Preparación del antídoto</h1>
 
             <Contadores aciertos={aciertos} errores={errores} />
 
             {indicePreguntaActual < preguntas.length ? (
                 <div className='pregunta-container'>
-                    <h4 className='pregunta-titulo'>{preguntas[indicePreguntaActual]?.pregunta}</h4>
+                    <h4 tabIndex={0} className='pregunta-titulo'>{preguntas[indicePreguntaActual]?.pregunta}</h4>
                     <input
+                        tabIndex={0}
                         type='text'
                         value={respuestaUsuario}
                         onChange={manejarCambioRespuesta}
@@ -138,7 +140,7 @@ const Principal = () => {
                     </div>
                 </div>
             ) : (
-                <p>Cargando pregunta...</p>
+                <p tabIndex={0}>Cargando pregunta...</p>
             )}
 
             {mostrarPopup && !mostrarResultado && (
